@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="oscuro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot AI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/img/img1.jpeg" alt="Logo" class="logo-img">
+            <strong>Lepid</strong> AI
+        </div>
+        <div class="controls">
+            <select id="theme-selector">
+                <option value="oscuro">Modo Oscuro</option>
+                <option value="claro">Modo Claro</option>
+                <option value="personalizado">Personalizado</option>
+            </select>
+            <div id="custom-controls" style="display: none; margin-left: 10px;">
+                <input type="color" id="color-bg" value="#0f0c29">
+                <input type="color" id="color-accent" value="#9d50bb">
+            </div>
+        </div>
+    </header>
+
+    <main id="chat-box">
+        <div id="welcome-message">
+            <h2>Bienvenido, ¿Puedo ayudarte?</h2>
+            <p>Sube imágenes, audios o escribe un mensaje.</p>
+        </div>
+    </main>
+
+    <footer>
+        <label for="file-input" style="cursor: pointer; font-size: 1.5rem;">📁</label>
+        <input type="file" id="file-input" style="display: none;" accept="image/*,audio/*,application/pdf,text/plain">
+        <input type="text" id="user-input" placeholder="Escribe aquí...">
+        <button id="send-btn">Enviar</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
